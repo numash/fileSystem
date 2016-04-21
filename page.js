@@ -1,9 +1,5 @@
 "use strict";
 
-var ip = 'http://127.0.0.1:';
-var port = '8081/';
-var prefix = ip + port;
-
 class Page{
 	constructor(options){
 		this._el = options.element
@@ -31,7 +27,7 @@ class Page{
 
 		$.ajax({
 	        type: 'GET',
-	        url: prefix + "next",
+	        url: "/next",
 	        dataType: 'json',
 	        data: data,
 	        async: true,
@@ -48,7 +44,7 @@ class Page{
 
 		$.ajax({
 	        type: 'GET',
-	        url: prefix + "prev",
+	        url: "/prev",
 	        dataType: 'json',
 	        async: true,
 	        success: page._updateFiles.bind(page),
