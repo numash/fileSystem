@@ -3,6 +3,7 @@
 var express = require('express');
 var app = express();
 var fs = require('fs');
+var http = require('http');
 var port = process.env.PORT || 8081;
 
 //app.use(express.static(__dirname));
@@ -82,6 +83,11 @@ app.get('/prev', function (req, res) {
   	});
 });
 
+app.set('port', port);
+
+var server = http.createServer(app);
+server.listen(port);
+/*
 var server = app.listen(port, function () {
 
   var host = server.address().address;
@@ -89,4 +95,4 @@ var server = app.listen(port, function () {
 
   console.log("App listening at http://%s:%s", host, port);
 
-});
+});*/
