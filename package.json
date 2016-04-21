@@ -1,0 +1,15 @@
+{
+    "name": "filesystem",
+    "version": "0.0.1",
+    "private": true,
+    "scripts": {
+        "start": "node server.js" 
+    },
+    "dependencies": {
+        "express": ">=4.x.x"
+    },
+    "engines": {
+        "node": "4.4.x",
+        "npm": "2.14.x"
+    }
+}
